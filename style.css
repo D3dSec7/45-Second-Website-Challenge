@@ -667,3 +667,16 @@ header, main, footer { position: relative; z-index: 1; }
   .skills.reveal .meter i { transform: none; }
   .cursor { display: none; }
 }
+
+#contact .section-head { text-align: center; }
+#contact .contact-card {
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+#contact .contact-card .icon { margin-top: 0; }
+#contact .contact-actions { justify-content: center; }
+#contact .link-row { justify-content: center; }

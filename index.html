@@ -6,6 +6,24 @@
   <title>Rence Baring | Personal Portfolio</title>
   <meta name="description" content="Personal portfolio of Lawrence Luke R. Baring, a 3rd-year BS Information Technology student at the University of Cebu.">
   <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://d3dsec7.github.io/45-Second-Website-Challenge/">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rence Baring">
+  <meta property="og:title" content="Rence Baring | Personal Portfolio">
+  <meta property="og:description" content="3rd-year BSIT student and working scholar at the University of Cebu. Persistent, curious, practical.">
+  <meta property="og:url" content="https://d3dsec7.github.io/45-Second-Website-Challenge/">
+  <meta property="og:image" content="https://d3dsec7.github.io/45-Second-Website-Challenge/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rence, Lawrence Luke R. Baring, BS Information Technology student at the University of Cebu">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rence Baring | Personal Portfolio">
+  <meta name="twitter:description" content="3rd-year BSIT student and working scholar at the University of Cebu. Persistent, curious, practical.">
+  <meta name="twitter:image" content="https://d3dsec7.github.io/45-Second-Website-Challenge/images/og-image.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +50,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#plans">Plans</a></li>
         <li><a href="#quiz">Quiz</a></li>
-        <li><a href="#links">Links</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -262,10 +280,23 @@
       </div>
     </section>
 
-    <section class="section" id="links" aria-labelledby="links-title">
+    <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="section-head reveal">
-        <h2 id="links-title">Find me online</h2>
-        <p class="section-sub">Say hi, or see what I'm building.</p>
+        <h2 id="contact-title">Get in touch</h2>
+        <p class="section-sub">Questions, feedback, or just saying hi. I'd like to hear from you.</p>
+      </div>
+
+      <div class="contact-card reveal">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <div class="contact-body">
+          <p class="contact-label">Email</p>
+          <p class="contact-email" id="emailText">baringlawrence1@gmail.com</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:baringlawrence1@gmail.com?subject=Hello%20Rence">Send me an email</a>
+            <button class="btn btn-ghost" id="copyEmail" type="button">Copy email</button>
+          </div>
+          <p class="copy-status" id="copyStatus" role="status" aria-live="polite"></p>
+        </div>
       </div>
 
       <div class="link-row reveal">

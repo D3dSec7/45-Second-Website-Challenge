@@ -374,5 +374,42 @@
     els.question.focus();
   });
 
+
+  var copyBtn = $('#copyEmail');
+  var copyStatus = $('#copyStatus');
+  var emailAddress = $('#emailText').textContent.trim();
+  var copyTimer;
+
+  function showCopied(message) {
+    copyStatus.textContent = message;
+    clearTimeout(copyTimer);
+    copyTimer = setTimeout(function () { copyStatus.textContent = ''; }, 2500);
+  }
+
+  function fallbackCopy() {
+    var field = document.createElement('textarea');
+    field.value = emailAddress;
+    field.setAttribute('readonly', '');
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.appendChild(field);
+    field.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+    document.body.removeChild(field);
+    showCopied(ok ? 'Email copied.' : 'Could not copy. Please select the email and copy it manually.');
+  }
+
+  copyBtn.addEventListener('click', function () {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(emailAddress).then(
+        function () { showCopied('Email copied.'); },
+        fallbackCopy
+      );
+    } else {
+      fallbackCopy();
+    }
+  });
+
   showQuestion();
 })();

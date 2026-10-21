@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rence Baring | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Lawrence Luke R. Baring, a 3rd-year BS Information Technology student at the University of Cebu.">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="network" aria-hidden="true"></canvas>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#hero" aria-label="Rence, back to top">Rence</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#links">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="hero-hello">Hi, I'm</p>
+        <h1 id="hero-title">
+          <span class="name-line" aria-label="Rence">
+            <span class="char" aria-hidden="true">R</span><span class="char" aria-hidden="true">e</span><span class="char" aria-hidden="true">n</span><span class="char" aria-hidden="true">c</span><span class="char" aria-hidden="true">e</span>
+          </span>
+        </h1>
+        <p class="full-name">Lawrence Luke R. Baring</p>
+        <p class="role-line">
+          <span id="typed" aria-live="off">Working scholar</span><span class="cursor" aria-hidden="true"></span>
+        </p>
+        <p class="tagline">Persistent, curious, and practical. Turning every opportunity into a stepping stone.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">Get to know me</a>
+          <a class="btn btn-ghost" href="#quiz">Take the quiz</a>
+        </div>
+      </div>
+
+      <figure class="watch" id="watch">
+        <div class="bezel">
+          <svg class="ticks" viewBox="0 0 200 200" aria-hidden="true" id="ticks"></svg>
+          <div class="seconds-orbit" id="secondsOrbit" aria-hidden="true"><span class="seconds-dot"></span></div>
+          <div class="face">
+            <img src="images/rence.jpg" alt="Portrait of Rence wearing glasses and a white jacket" width="750" height="1000">
+          </div>
+        </div>
+        <figcaption>
+          <span class="clock-label">Your local time</span>
+          <time id="clock" class="clock">--:--:--</time>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section-head reveal">
+        <h2 id="about-title">About me</h2>
+        <p class="section-sub">A working scholar with a plan.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">
+            I am a working scholar student at the University of Cebu and an aspiring IT professional who is passionate about technology, continuous learning, and solving real-world problems.
+          </p>
+          <p>
+            I strive to grow my skills, overcome challenges, and turn every opportunity into a stepping stone toward my future goals. I'm a calm person, and I adjust how I communicate to whoever I'm talking with.
+          </p>
+
+          <div class="traits" role="group" aria-label="Three words that describe me. Select one to read more.">
+            <button class="trait" type="button" data-trait="persistent" aria-pressed="false">Persistent</button>
+            <button class="trait" type="button" data-trait="curious" aria-pressed="false">Curious</button>
+            <button class="trait" type="button" data-trait="practical" aria-pressed="false">Practical</button>
+          </div>
+          <p class="trait-text" id="traitText" aria-live="polite">Select a word to see how it shows up in my work.</p>
+        </div>
+
+        <aside class="about-card reveal" aria-label="Quick facts">
+          <dl class="facts">
+            <div><dt>Name</dt><dd>Lawrence Luke R. Baring</dd></div>
+            <div><dt>Nickname</dt><dd>Rence</dd></div>
+            <div><dt>Age</dt><dd>21</dd></div>
+            <div><dt>School</dt><dd>University of Cebu</dd></div>
+            <div><dt>Course</dt><dd>BS Information Technology</dd></div>
+            <div><dt>Year level</dt><dd>3rd year</dd></div>
+          </dl>
+          <blockquote class="motto">
+            <p lang="la">Qui audet vincit</p>
+            <footer>My motto. It means "Who dares, wins."</footer>
+          </blockquote>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="interests" aria-labelledby="interests-title">
+      <div class="section-head reveal">
+        <h2 id="interests-title">What I enjoy</h2>
+        <p class="section-sub">Where my time goes when I'm not studying or working.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5l-2 4M12 5l-2 4M17 5l-2 4"/></svg>
+          <h3>Movies and shows</h3>
+          <p>I like stories that keep you thinking and a little on edge.</p>
+          <ul class="tags">
+            <li>Inception</li>
+            <li>Peaky Blinders</li>
+            <li>Breaking Bad</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h12a3 3 0 0 1 3 3.2l-.6 4.4a2.2 2.2 0 0 1-3.9 1.1L15 16H9l-1.5 1.7a2.2 2.2 0 0 1-3.9-1.1L3 12.200A3 3 0 0 1 6 9Z"/><path d="M8 11.500v2M7 12.500h2M16 12h.01M18 13.500h.01"/></svg>
+          <h3>Online games</h3>
+          <p>From fast online matches to big story adventures.</p>
+          <ul class="tags">
+            <li>Modern Warfare</li>
+            <li>God of War</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l11-2v12"/><circle cx="6.500" cy="18" r="2.500"/><circle cx="17.500" cy="16" r="2.500"/></svg>
+          <h3>Walks and music</h3>
+          <p>Long walks with headphones on. I can't pick one favorite genre because I like too many.</p>
+          <ul class="tags">
+            <li>Every genre</li>
+            <li>Long walks</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5.500"/><path d="M12 9v3l2 1.500M9.500 6.500 10 2.500h4l.5 4M9.500 17.500 10 21.500h4l.5-4"/></svg>
+          <h3>Watches</h3>
+          <p>I appreciate good design on the wrist. The collection starts once I have my own money to spend on it.</p>
+          <ul class="tags">
+            <li>Future collector</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="section-head reveal">
+        <h2 id="skills-title">Skills</h2>
+        <p class="section-sub">An honest look at where I am right now.</p>
+      </div>
+
+      <div class="skills-wrap">
+        <ul class="skills reveal" aria-label="Skills and current level">
+          <li class="skill" data-level="3">
+            <span class="skill-name">PC troubleshooting</span>
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="skill-level">Comfortable</span>
+          </li>
+          <li class="skill" data-level="3">
+            <span class="skill-name">Adapting how I communicate</span>
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="skill-level">Comfortable</span>
+          </li>
+          <li class="skill" data-level="3">
+            <span class="skill-name">Time management</span>
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="skill-level">Comfortable</span>
+          </li>
+          <li class="skill" data-level="2">
+            <span class="skill-name">Leading a group</span>
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="skill-level">Growing</span>
+          </li>
+          <li class="skill" data-level="1">
+            <span class="skill-name">Cooking</span>
+            <span class="meter" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="skill-level">Basics (easy meals)</span>
+          </li>
+        </ul>
+
+        <div class="learning reveal">
+          <h3>Currently learning</h3>
+          <p>These are the skills I'm building right now.</p>
+          <ul class="learning-list">
+            <li>
+              <strong>Programming</strong>
+              <span>Still building my foundation, one project at a time.</span>
+            </li>
+            <li>
+              <strong>Networking</strong>
+              <span>Learning how devices talk to each other.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="plans" aria-labelledby="plans-title">
+      <div class="section-head reveal">
+        <h2 id="plans-title">Where I'm headed</h2>
+        <p class="section-sub">The next few years, in order.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <h3>Now</h3>
+          <p>3rd year BS Information Technology student and working scholar at the University of Cebu.</p>
+        </li>
+        <li class="reveal">
+          <h3>Graduate</h3>
+          <p>Finish my IT degree and strengthen my skills in programming, database management, and networking.</p>
+        </li>
+        <li class="reveal">
+          <h3>Start my IT career</h3>
+          <p>Get hands-on experience with real-world technologies and find the specialization that fits my interests.</p>
+        </li>
+        <li class="reveal">
+          <h3>Build a future I'm proud of</h3>
+          <p>Establish a stable career, become financially independent, and keep learning and taking on new challenges.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="quiz" aria-labelledby="quiz-title">
+      <div class="section-head reveal">
+        <h2 id="quiz-title">How well do you know me?</h2>
+        <p class="section-sub">Five questions. The answers are somewhere on this page.</p>
+      </div>
+
+      <div class="quiz reveal" id="quizBox">
+        <div class="quiz-progress" aria-hidden="true"><span id="quizBar"></span></div>
+        <p class="quiz-count" id="quizCount" aria-live="polite">Question 1 of 5</p>
+        <h3 class="quiz-question" id="quizQuestion"></h3>
+        <div class="quiz-options" id="quizOptions" role="group" aria-labelledby="quizQuestion"></div>
+        <p class="quiz-feedback" id="quizFeedback" aria-live="polite"></p>
+        <button class="btn btn-primary quiz-next" id="quizNext" type="button" hidden>Next question</button>
+
+        <div class="quiz-result" id="quizResult" hidden>
+          <p class="quiz-score" id="quizScore"></p>
+          <p id="quizMessage"></p>
+          <button class="btn btn-ghost" id="quizRestart" type="button">Try again</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links" aria-labelledby="links-title">
+      <div class="section-head reveal">
+        <h2 id="links-title">Find me online</h2>
+        <p class="section-sub">Say hi, or see what I'm building.</p>
+      </div>
+
+      <div class="link-row reveal">
+        <a class="link-card" href="https://github.com/D3dSec7" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.300 1.400-4.300-2.500-6-3m12 5v-3.500c0-1 .1-1.400-.5-2 2.800-.3 5.500-1.400 5.500-6a4.600 4.600 0 0 0-1.300-3.200 4.200 4.200 0 0 0-.1-3.200s-1.100-.3-3.500 1.300a12.300 12.300 0 0 0-6.200 0C6.500 2.800 5.400 3.100 5.400 3.100a4.200 4.200 0 0 0-.1 3.200A4.600 4.600 0 0 0 4 9.500c0 4.600 2.700 5.700 5.500 6-.6.600-.6 1.200-.5 2V21"/></svg>
+          <span>
+            <strong>GitHub</strong>
+            <small>D3dSec7</small>
+          </span>
+        </a>
+        <a class="link-card" href="https://www.facebook.com/LLBaring" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <span>
+            <strong>Facebook</strong>
+            <small>LLBaring</small>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-motto" lang="la">Qui audet vincit</p>
+    <p>Thanks for stopping by. I hope you learned something new about me.</p>
+    <p class="footer-small">Built by Lawrence Luke R. Baring (Rence) with HTML, CSS, and JavaScript.</p>
+    <a class="back-top" href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
